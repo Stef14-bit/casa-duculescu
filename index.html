@@ -18,15 +18,17 @@
 
 <!--
   ============================================================
-  Numele, telefonul și facilitățile sunt deja completate cu
-  informațiile reale primite de la client.
+  Toate informațiile esențiale sunt completate cu datele reale
+  primite de la client: nume, telefon, adresă, program,
+  preț/capacitate camere, facilități.
 
-  TODO ÎNAINTE DE LANSARE — mai trebuie completate:
-  1) Strada și numărul exact (secțiunea Locație + footer)
-  2) Programul de recepție (footer)
-  3) Numărul exact de camere, capacitate și preț (secțiunea Facilități)
-  4) Activitățile din zonă — sunt momentan exemple, de confirmat
-  5) Poze suplimentare în /media (gallery-6.jpg e încă un loc liber)
+  RĂMÂNE DE FĂCUT:
+  1) Poze suplimentare/mai bune în /media, dacă apar (păstrează
+     denumirile fișierelor sau adaugă gallery-9.jpg, 10.jpg etc.
+     — galeria le include automat)
+  2) Activitățile din zonă (secțiunea Activități) — sunt încă
+     exemple (Salina Ocnele Mari, drumeții, Râmnicu Vâlcea),
+     de confirmat cu clientul dacă sunt potrivite
   ============================================================
 -->
 
@@ -55,8 +57,7 @@
         <img src="media/about.jpg" alt="Pensiunea Casa Duculescu, vedere exterioară" width="1000" height="1333">
       </div>
       <div class="about-text">
-        <p>Casa Duculescu este locul perfect pentru odihna ta, în Ocnele Mari. Camere moderne, curate și primitoare, gândite să te facă să te simți ca acasă — exact confortul de care ai nevoie după o zi petrecută la munte.</p>
-        <p class="placeholder-note">[De completat: de când există pensiunea, câte camere are în total și orice alt detaliu care v-ar plăcea să fie spus oaspeților.]</p>
+        <p>Casa Duculescu este locul perfect pentru odihna ta, în Ocnele Mari. 8 camere duble, moderne, curate și primitoare, fiecare cu baie proprie — gândite să te facă să te simți ca acasă, exact confortul de care ai nevoie după o zi petrecută la munte.</p>
       </div>
     </div>
   </div>
@@ -75,7 +76,7 @@
         </div>
         <div class="card-body">
           <h3>Camere moderne</h3>
-          <p class="placeholder-note">Camere moderne, curate și primitoare. [De completat: câte camere în total, capacitate (1-2-3 persoane), preț/noapte.]</p>
+          <p class="placeholder-note">8 camere duble (16 persoane în total), moderne și primitoare. Pentru tarife, scrie-ne pe WhatsApp sau apelează.</p>
         </div>
       </article>
 
@@ -95,20 +96,40 @@
         </div>
         <div class="card-body">
           <h3>Bucătărie comună</h3>
-          <p class="placeholder-note">[De completat: bucătăria este la dispoziția tuturor oaspeților? e inclusă în preț? are program?]</p>
+          <p class="placeholder-note">Bucătărie complet utilată, pusă la dispoziția oaspeților.</p>
         </div>
       </article>
 
-      <article class="facility-card facility-card--icons">
-        <div class="card-body">
-          <div class="icon-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1f3a2e" stroke-width="1.7" stroke-linecap="round"><path d="M5 12.5a11 11 0 0 1 14 0"/><path d="M8 15.5a7 7 0 0 1 8 0"/><path d="M11 18.5a3 3 0 0 1 2 0"/><circle cx="12" cy="19.3" r=".6" fill="#1f3a2e" stroke="none"/></svg>
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1f3a2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="11" rx="1.5"/><path d="M7 9V7a5 5 0 0 1 10 0v2"/></svg>
-          </div>
-          <h3>Wi-Fi &amp; parcare gratuite</h3>
-          <p class="placeholder-note">Wi-Fi gratuit în toată pensiunea și parcare gratuită chiar la fața locului.</p>
-        </div>
-      </article>
+      <div class="facility-tags">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1f3a2e" stroke-width="1.7" stroke-linecap="round"><path d="M5 12.5a11 11 0 0 1 14 0"/><path d="M8 15.5a7 7 0 0 1 8 0"/><path d="M11 18.5a3 3 0 0 1 2 0"/><circle cx="12" cy="19.3" r=".6" fill="#1f3a2e" stroke="none"/></svg>
+          Wi-Fi gratuit
+        </span>
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1f3a2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16l1.4-4.5A2 2 0 017.3 10h9.4a2 2 0 011.9 1.5L20 16"/><path d="M3 16h18v2a1 1 0 01-1 1h-1a1 1 0 01-1-1v-1H6v1a1 1 0 01-1 1H4a1 1 0 01-1-1v-2z"/><circle cx="7.5" cy="16" r=".8" fill="#1f3a2e" stroke="none"/><circle cx="16.5" cy="16" r=".8" fill="#1f3a2e" stroke="none"/></svg>
+          Parcare gratuită
+        </span>
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1f3a2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="10" rx="8" ry="3"/><path d="M4 10v3a8 3 0 0016 0v-3"/><path d="M8 17l-2 4M16 17l2 4M12 17v4"/></svg>
+          Grătar
+        </span>
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1f3a2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6"/><path d="M3 9h18M6 9v11M18 9v11M10.5 9v11M15.5 9v11"/></svg>
+          Foișor
+        </span>
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1f3a2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6M2 10v4M20 9v6M22 10v4M7 12h10"/><rect x="5" y="8" width="3" height="8" rx="1"/><rect x="16" y="8" width="3" height="8" rx="1"/></svg>
+          Sală de fitness
+        </span>
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1f3a2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16M20 4v16M4 4h16"/><path d="M9 4v7a3 3 0 006 0V4"/></svg>
+          Loc de joacă pentru copii
+        </span>
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1f3a2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13a3 3 0 010 6h-1"/><path d="M4 9v7a3 3 0 003 3h6a3 3 0 003-3v-1"/><path d="M7 3c0 1-1 1-1 2M11 3c0 1-1 1-1 2"/></svg>
+          Cafeaua casei
+        </span>
+      </div>
 
     </div>
   </div>
@@ -161,10 +182,8 @@
     <span class="eyebrow">Cum ajungeți</span>
     <h2>Locație</h2>
     <div class="location-box">
-      <p class="address">Ocnele Mari, județul Vâlcea</p>
-      <p class="placeholder-note">[De completat: strada și numărul exact, plus eventuale indicații scurte de orientare]</p>
-      <!-- TODO: când ai adresa exactă, înlocuiește query-ul de mai jos pentru un link mai precis -->
-      <a class="link-underline" href="https://www.google.com/maps/search/?api=1&query=Ocnele+Mari+V%C3%A2lcea" target="_blank" rel="noopener">
+      <p class="address">Str. 1 Decembrie nr. 34, Ocnele Mari, județul Vâlcea</p>
+      <a class="link-underline" href="https://www.google.com/maps/search/?api=1&query=Strada+1+Decembrie+34%2C+Ocnele+Mari%2C+V%C3%A2lcea" target="_blank" rel="noopener">
         Vezi traseul pe hartă →
       </a>
     </div>
@@ -176,9 +195,9 @@
   <div class="container">
     <h2>Contact</h2>
     <p class="contact-line">Casa Duculescu</p>
-    <p class="contact-line">Ocnele Mari, județul Vâlcea</p>
+    <p class="contact-line">Str. 1 Decembrie nr. 34, Ocnele Mari, județul Vâlcea</p>
     <p class="contact-line"><a class="phone-link" href="tel:+40767574248">0767 574 248</a></p>
-    <p class="contact-line">[Program — ex: recepție 08:00–20:00]</p>
+    <p class="contact-line">Cazare: de la ora 10:00 · Eliberare cameră: până la ora 12:00</p>
 
     <small>© <span id="anul"></span> Casa Duculescu. Toate drepturile rezervate.</small>
   </div>
