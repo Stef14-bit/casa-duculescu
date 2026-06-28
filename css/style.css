@@ -1,0 +1,333 @@
+/* =========================================================
+   STAȚIUNE — stil neoclasic, mobile-first
+   Paletă: stuc crem, verde brad, auriu vechi, cărbune cald
+   Tipografie: Cormorant Garamond (titluri) + Lora (text) + Work Sans (butoane/etichete)
+   ========================================================= */
+
+:root {
+  --cream: #f2ebdd;
+  --cream-2: #ece2cd;
+  --pine: #1f3a2e;
+  --pine-2: #16291f;
+  --gold: #b08d34;
+  --gold-light: #cdab57;
+  --charcoal: #2b2825;
+  --sage: #dce3d5;
+  --whatsapp: #25d366;
+  --whatsapp-dark: #1ea551;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
+  --font-utility: "Work Sans", Arial, sans-serif;
+
+  --max-width: 1080px;
+  --radius: 6px;
+}
+
+/* ---------- Reset minimal ---------- */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 78px; /* spațiu pentru bara fixă de contact */
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { padding: 0; margin: 0; list-style: none; }
+section { padding: 56px 20px; }
+.container { max-width: var(--max-width); margin: 0 auto; }
+
+/* Focus vizibil pentru accesibilitate (taste/tab) */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+}
+
+/* ---------- Eticheta secțiunii (eyebrow) ---------- */
+.eyebrow {
+  display: block;
+  font-family: var(--font-utility);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--pine);
+  margin: 0;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 28px;
+}
+
+p { margin: 0 0 14px; }
+
+/* ---------- Despărțitor clasic (linie + romb) ---------- */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 0 20px;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.65;
+}
+.divider .gem {
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex: 0 0 auto;
+}
+
+/* ---------- Crest / emblemă (semnătura vizuală a paginii) ---------- */
+.crest { width: 86px; height: 86px; margin: 0 auto 14px; display: block; }
+
+/* ---------- HEADER / HERO ---------- */
+.hero {
+  position: relative;
+  padding: 40px 20px 48px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--cream-2), var(--cream));
+}
+.hero h1 {
+  font-size: 40px;
+  letter-spacing: 0.02em;
+}
+.hero .tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--charcoal);
+  font-size: 17px;
+  margin: 10px 0 26px;
+  opacity: 0.85;
+}
+.hero-photo {
+  border: 6px solid var(--cream);
+  outline: 1px solid var(--gold);
+  outline-offset: -6px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+.hero-photo img { width: 100%; height: auto; }
+
+/* ---------- Butoane de contact ---------- */
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 380px;
+  margin: 0 auto;
+}
+.btn {
+  font-family: var(--font-utility);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 20px;
+  border-radius: var(--radius);
+  min-height: 52px;
+  border: 1px solid transparent;
+}
+.btn svg { width: 22px; height: 22px; flex: 0 0 auto; }
+.btn-whatsapp { background: var(--whatsapp); color: #ffffff; }
+.btn-call { background: var(--pine); color: var(--cream); border-color: var(--gold); }
+
+/* ---------- DESPRE NOI ---------- */
+.about-grid { display: grid; gap: 26px; }
+.about-photo {
+  border: 6px solid #ffffff;
+  outline: 1px solid var(--gold);
+  outline-offset: -6px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.about-text { text-align: center; }
+.about-text .placeholder-note { font-style: italic; opacity: 0.75; }
+
+/* ---------- FACILITĂȚI ---------- */
+.facility-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: 1fr;
+}
+.facility-card {
+  background: #ffffff;
+  border: 1px solid var(--sage);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-align: center;
+}
+.facility-card .photo-frame { border-bottom: 3px solid var(--gold); }
+.facility-card .card-body { padding: 20px 18px; }
+.facility-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.facility-card .placeholder-note { font-style: italic; opacity: 0.75; font-size: 15px; }
+
+/* Card de facilități fără poză, doar iconițe (ex: Wi-Fi & parcare) */
+.facility-card--icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+.facility-card--icons .card-body { padding-top: 28px; padding-bottom: 28px; }
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 14px;
+}
+.icon-row svg { width: 34px; height: 34px; }
+
+/* ---------- GALERIE FOTO ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.gallery-grid a {
+  display: block;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+.gallery-grid img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- ACTIVITĂȚI ---------- */
+.activities-list {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.activities-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid var(--sage);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.activities-list .leaf { width: 20px; height: 20px; flex: 0 0 auto; margin-top: 3px; }
+
+/* ---------- LOCAȚIE ---------- */
+.location-box {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid var(--sage);
+  border-radius: var(--radius);
+  padding: 26px 20px;
+}
+.location-box .address { font-size: 18px; margin-bottom: 16px; }
+.link-underline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-utility);
+  font-weight: 600;
+  color: var(--pine);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 3px;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background: var(--pine);
+  color: var(--cream);
+  padding: 40px 20px 32px;
+  text-align: center;
+}
+.site-footer h2 { color: var(--cream); }
+.site-footer .divider::before,
+.site-footer .divider::after { background: var(--gold-light); }
+.site-footer .contact-line { margin: 4px 0; font-family: var(--font-utility); font-size: 15px; }
+.site-footer .cta-group { margin-top: 22px; margin-bottom: 26px; }
+.site-footer .btn-call { background: transparent; color: var(--cream); border-color: var(--gold-light); }
+.site-footer small {
+  display: block;
+  margin-top: 22px;
+  opacity: 0.65;
+  font-family: var(--font-utility);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- BARA FIXĂ DE CONTACT (widgetul unic) ---------- */
+.sticky-cta {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--charcoal);
+  border-top: 2px solid var(--gold);
+  padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+  gap: 8px;
+}
+.sticky-cta .btn { min-height: 48px; font-size: 15px; border-radius: 4px; }
+.sticky-cta .btn-call { background: transparent; color: var(--cream); border-color: var(--gold-light); }
+
+/* =========================================================
+   TABLET ȋn sus (≥600px)
+   ========================================================= */
+@media (min-width: 600px) {
+  body { font-size: 18px; }
+  section { padding: 72px 32px; }
+  h2 { font-size: 36px; }
+  .hero h1 { font-size: 52px; }
+  .hero .tagline { font-size: 19px; }
+  .cta-group { flex-direction: row; }
+  .about-grid { grid-template-columns: 1fr 1fr; align-items: center; text-align: left; }
+  .about-text { text-align: left; }
+  .facility-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .sticky-cta { max-width: 480px; left: 50%; transform: translateX(-50%); border-radius: 10px 10px 0 0; bottom: 0; }
+}
+
+/* =========================================================
+   DESKTOP (≥960px)
+   ========================================================= */
+@media (min-width: 960px) {
+  .hero h1 { font-size: 60px; }
+  .gallery-grid { gap: 14px; }
+}
