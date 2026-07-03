@@ -30,7 +30,7 @@ Deschide `index.html` direct într-un browser, sau folosește extensia **Live Se
 
 ## Contact
 
-Telefon / WhatsApp: 0767 574 248
+
 
 ## Licență
 
