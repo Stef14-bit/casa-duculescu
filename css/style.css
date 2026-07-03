@@ -544,29 +544,30 @@ h3 {
 }
 
 /* ================================================================
-   BARA FIXĂ CONTACT — 2 butoane jos, fără background
+   BUTOANE CONTACT — colț dreapta jos (desktop) / bara jos (mobil)
 ================================================================ */
 .sticky-cta {
   position: fixed;
-  bottom: 0; left: 0; right: 0;
+  bottom: 1.2rem;
+  right: 1.2rem;
   z-index: 150;
   display: flex;
-  gap: .7rem;
-  padding: .7rem .9rem;
+  flex-direction: column;
+  gap: .6rem;
 }
 
 .btn {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .5rem;
   font-weight: 600;
-  font-size: clamp(.85rem, 2vw, 1rem);
-  padding: .85rem 1rem;
+  font-size: .95rem;
+  padding: .8rem 1.4rem;
   border-radius: var(--r-md);
-  box-shadow: 0 4px 20px rgba(0,0,0,.22);
+  box-shadow: 0 4px 20px rgba(0,0,0,.28);
   transition: opacity .2s, transform .15s;
+  white-space: nowrap;
 }
 .btn:hover { opacity: .9; transform: translateY(-2px); }
 .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
@@ -574,4 +575,16 @@ h3 {
 .btn-whatsapp { background: #25d366; color: var(--white); }
 .btn-call     { background: var(--green); color: var(--white); }
 
-body { padding-bottom: 80px; }
+/* Pe mobil — bara full-width jos */
+@media (max-width: 600px) {
+  .sticky-cta {
+    flex-direction: row;
+    bottom: 0; right: 0; left: 0;
+    padding: .65rem .8rem;
+    gap: .6rem;
+  }
+  .btn { flex: 1; }
+}
+
+body { padding-bottom: 0; }
+@media (max-width: 600px) { body { padding-bottom: 72px; } }
